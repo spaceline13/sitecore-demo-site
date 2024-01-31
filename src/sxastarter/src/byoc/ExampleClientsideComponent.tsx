@@ -22,6 +22,10 @@ export default function ExampleClientsideComponent(props: {
     <>
       <h2>Clientside</h2>
       <dl style={props.bold ? { fontWeight: 'bold' } : {}}>
+        <dt>firstname</dt>
+        <dd>{props.firstName}</dd>
+        <dt>lastname</dt>
+        <dd>{props.lastName}</dd>
         <dt>Description</dt>
         <dd>Interactive UI</dd>
         <dt>Rendered on</dt>
