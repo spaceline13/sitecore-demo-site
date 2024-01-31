@@ -3,8 +3,8 @@ import * as FEAAS from '@sitecore-feaas/clientside/react';
 import { ReactNode, useEffect, useState } from 'react';
 
 export default function ExampleClientsideComponent(props: {
-  firstName: string;
-  lastName?: string;
+  firstname: string;
+  lastname?: string;
   telephone?: string;
   bold?: boolean;
   children?: ReactNode;
@@ -22,17 +22,13 @@ export default function ExampleClientsideComponent(props: {
     <>
       <h2>Clientside</h2>
       <dl style={props.bold ? { fontWeight: 'bold' } : {}}>
-        <dt>firstname</dt>
-        <dd>{props.firstName}</dd>
-        <dt>lastname</dt>
-        <dd>{props.lastName}</dd>
         <dt>Description</dt>
         <dd>Interactive UI</dd>
         <dt>Rendered on</dt>
         <dd>Clientside</dd>
         <dt>Data</dt>
         <dd>
-          {props.firstName} {props.lastName} / {props.telephone}
+          {props.firstname} {props.lastname} / {props.telephone}
         </dd>
         <dt>Clientside hook</dt>
         <dd>
@@ -57,11 +53,11 @@ FEAAS.registerComponent(ExampleClientsideComponent, {
   group: 'Examples',
   required: ['firstName'],
   properties: {
-    firstName: {
+    firstname: {
       type: 'string',
       title: 'First name',
     },
-    lastName: {
+    lastname: {
       type: 'string',
       title: 'Last name',
     },
@@ -76,7 +72,7 @@ FEAAS.registerComponent(ExampleClientsideComponent, {
     },
   },
   ui: {
-    firstName: {
+    firstname: {
       'ui:autofocus': true,
       'ui:emptyValue': '',
       'ui:placeholder': 'Write your first name',
