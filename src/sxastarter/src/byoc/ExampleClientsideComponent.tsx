@@ -1,0 +1,1 @@
+app/byoc/ExampleClientsideComponent.tsx
