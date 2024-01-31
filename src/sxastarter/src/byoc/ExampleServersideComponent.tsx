@@ -46,20 +46,13 @@ FEAAS.registerComponent(ExampleServersideComponent, {
       type: "number",
       title: "Telephone",
       minLength: 10,
-    },
-    bold: {
-      type: "boolean",
-      title: "Show text in bold weight",
-    },
+    }
   },
   ui: {
     firstName: {
       "ui:autofocus": true,
       "ui:emptyValue": "",
       "ui:placeholder": "Write your first name",
-    },
-    bold: {
-      "ui:widget": "radio",
-    },
+    }
   },
 });
