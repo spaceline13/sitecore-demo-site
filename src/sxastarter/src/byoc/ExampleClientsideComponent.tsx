@@ -8,6 +8,8 @@ export default function ExampleClientsideComponent(props: {
   lastName?: string;
   telephone?: string;
   bold?: boolean;
+  preview: string;
+  previewUrl: string;
   children?: ReactNode;
 }) {
   const [counter, setCounter] = useState(0);
@@ -29,7 +31,7 @@ export default function ExampleClientsideComponent(props: {
         <dd>Clientside</dd>
         <dt>Data</dt>
         <dd>
-          {props.name} {props.firstName} {props.lastName} / {props.telephone}
+          {props.name} {props.firstName} {props.lastName} / {props.telephone} / {props.preview} / {props.previewUrl}
         </dd>
         <dt>Clientside hook</dt>
         <dd>
@@ -58,9 +60,17 @@ FEAAS.registerComponent(ExampleClientsideComponent, {
       type: 'string',
       title: 'First name',
     },
-    lastname: {
+    lastName: {
       type: 'string',
       title: 'Last name',
+    },
+    preview: {
+      type: 'string',
+      title: 'Preview',
+    },
+    previewUrl: {
+      type: 'string',
+      title: 'Preview Url',
     },
     telephone: {
       type: 'number',
