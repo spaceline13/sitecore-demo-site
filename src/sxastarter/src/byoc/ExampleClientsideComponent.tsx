@@ -31,7 +31,8 @@ export default function ExampleClientsideComponent(props: {
         <dd>Clientside</dd>
         <dt>Data</dt>
         <dd>
-          {props.name} {props.firstName} {props.lastName} / {props.telephone} / {props.preview} / {props.previewUrl}
+          {props.name} {props.firstName} {props.lastName} / {props.telephone} / {props.preview} /{' '}
+          {props.previewUrl}
         </dd>
         <dt>Clientside hook</dt>
         <dd>
