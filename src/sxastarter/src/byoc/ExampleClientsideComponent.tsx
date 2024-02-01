@@ -52,17 +52,13 @@ FEAAS.registerComponent(ExampleClientsideComponent, {
   description: 'Description of my example component',
   thumbnail: 'https://feaasstatic.blob.core.windows.net/assets/thumbnails/byoc.svg',
   group: 'Examples',
-  required: ['name'],
+  required: ['firstName'],
   properties: {
     name: {
       type: 'string',
-      title: 'Name',
-    },
-    firstName: {
-      type: 'string',
       title: 'First name',
     },
-    lastName: {
+    lastname: {
       type: 'string',
       title: 'Last name',
     },
