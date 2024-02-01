@@ -3,8 +3,9 @@ import * as FEAAS from '@sitecore-feaas/clientside/react';
 import { ReactNode, useEffect, useState } from 'react';
 
 export default function ExampleClientsideComponent(props: {
-  name: string;
-  lastname?: string;
+  name?: string;
+  firstName?: string;
+  lastName?: string;
   telephone?: string;
   bold?: boolean;
   children?: ReactNode;
@@ -28,7 +29,7 @@ export default function ExampleClientsideComponent(props: {
         <dd>Clientside</dd>
         <dt>Data</dt>
         <dd>
-          {props.name} {props.lastname} / {props.telephone}
+          {props.name} {props.firstName} {props.lastName} / {props.telephone}
         </dd>
         <dt>Clientside hook</dt>
         <dd>
@@ -51,13 +52,17 @@ FEAAS.registerComponent(ExampleClientsideComponent, {
   description: 'Description of my example component',
   thumbnail: 'https://feaasstatic.blob.core.windows.net/assets/thumbnails/byoc.svg',
   group: 'Examples',
-  required: ['firstName'],
+  required: ['name'],
   properties: {
     name: {
       type: 'string',
+      title: 'Name',
+    },
+    firstName: {
+      type: 'string',
       title: 'First name',
     },
-    lastname: {
+    lastName: {
       type: 'string',
       title: 'Last name',
     },
